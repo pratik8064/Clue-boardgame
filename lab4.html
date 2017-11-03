@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Clue</title>
+</head>
+
+<body>
+    <span id="inputData">
+        <!--Rooms: Kitchen, Study, Living Room, Dining Room, Library<br/>
+        Guests: Mrs. Peacock, Mrs. Green, Miss Scarlet, Colonel Mustard, Professor Plum<br/>
+        Weapons: Pistol, Knife, Wrench, Lead Pipe, Candlestick<br/>-->
+    </span>
+    <p name="displayName">
+        <FORM id="usernameForm">
+            Name:
+            <input type="text" name="userName" required/>
+            <input type="button" value="Enter" onclick="displayPlayer()" />
+        </FORM>
+    </p>
+    <p id="formParent">
+       <FORM>
+            <label>Guess Room:</label>
+            <select name="rooms">
+            </select>
+            <br/>
+            <label>Guess Suspect:</label>
+            <select name="suspects">
+            </select>
+            <br/>
+            <label>Guess Weapon:</label>
+            <select name="weapons">
+            </select>
+            <br/>
+            <input id="guessButton" type="button" disabled="true" value="Guess" onclick="checkGuess()" />
+            <input id="historyButton" type="button" value="Show History" />
+            <input id="recordButton" type="button" value="Show Record" onclick="showRecord()" />
+        </FORM>
+    </p>
+    <p id="historyP"></p>
+    <p id="record"></p>
+    <script src="lab4.js"></script>
+</body>
+
+</html>
